@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Imobiliaria</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+    <body>
+		<nav style="background:transparent" class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="user">Imobiliaria</a>
+				</div>
+				
+				<ul class="nav navbar-nav">
+					<li><a id="adicionar_imovel" style="display:none" href="adicionar_imovel"><span class="glyphicon glyphicon-home"></span> Criar anuncio</a></li>
+					<li><a id="relatorio" href="relatorio"><span class="glyphicon glyphicon-home"></span> Relatorio</a></li>
+					<!--<li><a href="editar_anuncio"><span class="glyphicon glyphicon-home"></span> Editar anuncio</a></li>-->
+
+				</ul>
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#account" data-toggle="modal"><span id="username" class="glyphicon glyphicon-lock"></span> ></a></li>
+			
+					<button type="button" id ="logout"class="btn btn-primary">Logout</button>
+				</ul> 
+			</div>
+		</nav>
+		<div class="jumbotron">
+		<h1 style="text-align: center;">Imobiliaria</h1>
+		<div class="container">
+
+		<div style="height: 10px;"></div>
+			<div class="row" style="text-align:center;">
+				<div class="col" style="text-align:center; border:2px solid black;border-radius: 10px;">
+					<form method="POST" id="form">
+						<div style="height: 10px;text-align: center;">
+							Bairro: <input type="text" placeholder="Bairro.." id="bairro" name="bairro" value="">
+							Tipo: <select class=" contact-form__input contact-form__input--select" id="tipo" name="tipo">
+							<option> </option>
+							<option> Casa</option>
+							<option> Apartamento</option>
+							</select>
+						</div>
+						<br>
+						<a href="" id="avancada" class="card-link busca-avancada">Busca avançada</a>
+						<div id="div-busca-avancada" style="display:none">
+							Numero de quartos: <input type="text" placeholder="" id="n_quartos" name="n_quartos">
+							Valor min: <input type="text" placeholder="" id="valor_min" name="valor_min">
+							Valor max: <input type="text" placeholder="" id="valor_max" name="valor_max">
+							Area: <input type="text" placeholder="" id="area" name="area">
+							<br><br>
+						</div>
+						<button type="button" id ="buscar"class="btn btn-primary">Buscar </button>
+						<br><br>
+					</form>
+
+				</div>
+			</div>				
+				<div style="height: 10px;"></div>
+				
+				
+				
+		</div>
+			<form method="POST" >
+				<div style="text-align: center;">
+					<div class="container" id="casas">				
+						<div class="card card-block" style="color:black;margin:2em auto 4em auto">
+							<div class="row equal" id ="re" style="height: ;">
+
+							</div>
+						</div>					
+					</div>
+				</div>
+			</form>
+		</div>
+		<script src="js/user.js"></script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Imobiliaria</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+	#login_form{
+		width:350px;
+		height:400px;
+		position:relative;
+		top:50px;
+		margin: auto;
+		padding: auto;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<div id="login_form" class="well">
+		<h2><center><span class="glyphicon glyphicon-user"></span> Sign Up</center></h2>
+		<form method="POST" >
+		Name: <input type="text" name="username" class="form-control" required> 
+		<div style="height: 10px;"></div>
+		Email: <input type="text" name="email" class="form-control" required>
+		<div style="height: 10px;"></div>		
+		Password: <input type="password" name="password" class="form-control" required> 
+		<div style="height: 10px;"></div>
+		Inquilino ou Senhorio: <select class="form-control contact-form__input contact-form__input--select" id="tipo" name="tipo">
+        <option>Inquilino</option>
+        <option>Senhorio</option>
+      </select>	  
+	  <div style="height: 10px;"></div>
+		<a href="#"><button type="submit" id="botao" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> Sign Up</button></a><a href="index"> Back to main page</a>
+      
+		</form>
+		<div style="height: 15px;"></div>
+		<div style="height: 15px;"></div>
+		<div  id="sucesso" style="color: green; font-size: 20px; display:none">
+			<center>
+				<p>Usuario criado</p>
+			</center>
+		</div>
+		<div  id="erro" style="color: red; font-size: 20px; display:none">
+			<center>
+				<p>Erro: Usuario ou Email ja cadastrado</p>
+			</center>
+		</div>
+	</div>
+</div> 
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="js/signup.js"></script>
+</body>
+</html>
